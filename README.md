@@ -1,1 +1,1 @@
-# Django-Job-Board
+# Job board website using django
