@@ -20,3 +20,6 @@ This is the code repository for [This Website](https://bahyalaa321.pythonanywher
 5- **Auth System**
     
 6- **Jobs API**    
+
+7- **multilingual**
+* Arabic and English.
