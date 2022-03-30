@@ -1,0 +1,313 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-02-25 16:32+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#: .\job\forms.py:9
+msgid "name"
+msgstr "الإسم"
+
+#: .\job\forms.py:9
+msgid "email"
+msgstr "البريد الالكتروني"
+
+#: .\job\forms.py:9
+msgid "portfolio_link"
+msgstr "موقع معرض اعمالك"
+
+#: .\job\forms.py:9
+msgid "cv"
+msgstr "السيرة الذاتيه"
+
+#: .\job\forms.py:9
+msgid "cover_letter"
+msgstr "نبذه مختصره عنك"
+
+#: .\job\forms.py:13
+msgid "Your name"
+msgstr "اسمك"
+
+#: .\job\forms.py:14 .\job\templates\job\job_applications.html:36
+msgid "Email"
+msgstr "البريد الالكتروني"
+
+#: .\job\forms.py:15
+msgid "Website/Portfolio link"
+msgstr "موقع معرض اعمالك"
+
+#: .\job\forms.py:18
+msgid "Coverletter"
+msgstr "نبذه مختصره عنك"
+
+#: .\job\forms.py:33
+msgid ""
+"Please start the sentence in a new line and put a full stop after each "
+"sentence."
+msgstr "من فضلك ابدأ الجمله في سطر جديد وضع نقطة في نهاية كل جمله"
+
+#: .\job\templates\job\add_job.html:12
+msgid "Add New Job"
+msgstr "إضافة وظيفة جديدة"
+
+#: .\job\templates\job\add_job.html:36
+msgid "Post New Job"
+msgstr "إضافة وظيفة جديدة"
+
+#: .\job\templates\job\add_job.html:40
+msgid "Post Now"
+msgstr "إضافة"
+
+#: .\job\templates\job\add_job.html:41 .\job\templates\job\delete_job.html:33
+#: .\job\templates\job\update_job.html:44
+msgid "Cancel"
+msgstr "إلغاء"
+
+#: .\job\templates\job\delete_job.html:28
+msgid "Delete Confirmation"
+msgstr "تاكيد عملية المسح"
+
+#: .\job\templates\job\delete_job.html:29
+msgid "Are you sure you want to delete the job"
+msgstr " هل انت متاكد انك تريد مسح هذا المنشور"
+
+#: .\job\templates\job\delete_job.html:32
+msgid "Yes, Delete"
+msgstr "نعم ,مسح"
+
+#: .\job\templates\job\job_applications.html:11
+#: .\job\templates\job\job_applications.html:32
+msgid "Job Application"
+msgstr "طلب تقديم علي وظيفة"
+
+#: .\job\templates\job\job_applications.html:34
+msgid "The Job"
+msgstr "الوظيفة"
+
+#: .\job\templates\job\job_applications.html:35
+msgid "Name"
+msgstr "الاسم"
+
+#: .\job\templates\job\job_applications.html:37
+msgid "Portfolio link"
+msgstr "موقع معرض اعمالك"
+
+#: .\job\templates\job\job_applications.html:38
+msgid "CV"
+msgstr "السيرة الذاتية"
+
+#: .\job\templates\job\job_applications.html:39
+msgid "Cover Letter"
+msgstr "نبذه مختصره عنك"
+
+#: .\job\templates\job\job_applications.html:40
+msgid "Application Date"
+msgstr "تاريخ التقديم"
+
+#: .\job\templates\job\job_detail.html:36
+msgid "posted"
+msgstr "تم نشره منذ"
+
+#: .\job\templates\job\job_detail.html:36
+msgid "ago"
+msgstr "مضت"
+
+#: .\job\templates\job\job_detail.html:40 .\job\templates\job\job_list.html:79
+msgid "Draft"
+msgstr "لم يتم نشره بعد"
+
+#: .\job\templates\job\job_detail.html:45
+msgid "published by "
+msgstr "تم نشره بواسطة"
+
+#: .\job\templates\job\job_detail.html:72
+#: .\job\templates\job\update_job.html:42
+msgid "Update"
+msgstr "تحديث"
+
+#: .\job\templates\job\job_detail.html:73
+msgid "Delete"
+msgstr "مسح"
+
+#: .\job\templates\job\job_detail.html:80
+msgid "Job Summery"
+msgstr "ملخص الوظيفة"
+
+#: .\job\templates\job\job_detail.html:85
+msgid "Published at"
+msgstr "تم نشرها بتاريخ"
+
+#: .\job\templates\job\job_detail.html:88
+msgid "Vacancy"
+msgstr "عدد الاماكن المتاحه"
+
+#: .\job\templates\job\job_detail.html:88
+msgid "Position"
+msgstr "مكان متاح"
+
+#: .\job\templates\job\job_detail.html:88
+msgid "Positions"
+msgstr "أماكن متاحه"
+
+#: .\job\templates\job\job_detail.html:89
+msgid "Salary"
+msgstr "المرتب"
+
+#: .\job\templates\job\job_detail.html:89
+msgid "$"
+msgstr "دولار امريكي"
+
+#: .\job\templates\job\job_detail.html:94
+msgid "Job Categories"
+msgstr "تصنيفات الوظيفه"
+
+#: .\job\templates\job\job_detail.html:105
+msgid "Job Applicants"
+msgstr "المتقدمين للوظيفة"
+
+#: .\job\templates\job\job_detail.html:118
+msgid "Job Description"
+msgstr "وصف الوظيفة"
+
+#: .\job\templates\job\job_detail.html:122
+msgid "Job Requirements"
+msgstr "متطلبات الوظيفة"
+
+#: .\job\templates\job\job_detail.html:127
+msgid "Apply for the job"
+msgstr "تقديم علي الوظيفة"
+
+#: .\job\templates\job\job_detail.html:154
+msgid "Upload Your CV"
+msgstr "رفع السيرة الذاتية"
+
+#: .\job\templates\job\job_detail.html:165 .\job\templates\job\job_list.html:87
+msgid "Apply Now"
+msgstr "التقديم الان"
+
+#: .\job\templates\job\job_list.html:16
+msgid "Job Available"
+msgstr "وظيفة متاحه"
+
+#: .\job\templates\job\job_list.html:16
+msgid "Jobs Available"
+msgstr "وظائف متاحه"
+
+#: .\job\templates\job\job_list.html:39
+msgid "Jobs Filter"
+msgstr "تصفية الوظائف"
+
+#: .\job\templates\job\job_list.html:43
+msgid "Search"
+msgstr "بحث"
+
+#: .\job\templates\job\job_list.html:54
+msgid "Jobs Listing"
+msgstr "الوظائف المتاحه"
+
+#: .\job\templates\job\job_list.html:90
+msgid "Date line:"
+msgstr "موعد النشر:"
+
+#: .\job\templates\job\update_job.html:36
+msgid "Update the job"
+msgstr "تحديث الوظيفه"
+
+#: .\job\views.py:36
+msgid "Home"
+msgstr "الرئيسية"
+
+#: .\job\views.py:56
+msgid "Your application has been sent successfully !"
+msgstr "لقد تم ارسال طلبك بنجاح !"
+
+#: .\job\views.py:61
+msgid "job_detail"
+msgstr "تفاصيل الوظيفة"
+
+#: .\job\views.py:68
+#, fuzzy
+#| msgid "Job Application"
+msgid "job_applications"
+msgstr "طلب تقديم علي وظيفة"
+
+#: .\job\views.py:82
+msgid "The job has been updated successfully !"
+msgstr "لقد تم تحديث الوظيفة بنجاح !"
+
+#: .\job\views.py:90
+msgid "Update Job"
+msgstr "تحديث وظيفه"
+
+#: .\job\views.py:105
+msgid "The job has been add successfully !"
+msgstr "لقد تم اضافة الوظيفة بنجاح !"
+
+#: .\job\views.py:110
+msgid "Add Job"
+msgstr "إضافة وظيفة"
+
+#: .\job\views.py:119
+msgid "The job has been deleted successfully !"
+msgstr "لقد تم حذف الوظيفة بنجاح !"
+
+#: .\job\views.py:121
+msgid "Delete Job"
+msgstr "مسح وظيفة"
+
+#, fuzzy
+#~| msgid "Published at"
+#~ msgid "published_at"
+#~ msgstr "تم نشرها بتاريخ"
+
+#, fuzzy
+#~| msgid "Vacancy"
+#~ msgid "vacancy"
+#~ msgstr "عدد الاماكن المتاحه"
+
+#, fuzzy
+#~| msgid "Salary"
+#~ msgid "salary"
+#~ msgstr "المرتب"
+
+#, fuzzy
+#~| msgid "published by "
+#~ msgid "publish"
+#~ msgstr "تم نشره بواسطة"
+
+#~ msgid "active"
+#~ msgstr "نشط"
+
+#, fuzzy
+#~| msgid "Update"
+#~ msgid "updated"
+#~ msgstr "تحديث"
+
+#, fuzzy
+#~| msgid "Job Requirements"
+#~ msgid "requirements"
+#~ msgstr "متطلبات الوظيفة"
+
+# python-format
+#~ msgid "%(vacancy)s Position%(job.vacancy|pluralize|safe)s"
+#~ msgstr "اماكن متاحه"
+
+#, fuzzy, python-format
+#~| msgid "Position%(vacancy)s"
+#~ msgid "Position%(vacancy)s"
+#~ msgstr "اماكن متاحه"

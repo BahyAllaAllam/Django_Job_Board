@@ -1,0 +1,523 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-02-25 16:32+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#: .\accounts\forms.py:10 .\accounts\forms.py:30
+msgid "Required. 150 characters or fewer."
+msgstr "إجباري. 150 حرف او اقل"
+
+#: .\accounts\forms.py:14 .\accounts\forms.py:20
+msgid "username"
+msgstr "اسم المستخدم"
+
+#: .\accounts\forms.py:14 .\accounts\forms.py:34
+msgid "email"
+msgstr "البريد الإلكتروني"
+
+#: .\accounts\forms.py:14
+msgid "password1"
+msgstr "كلمة السر 1"
+
+#: .\accounts\forms.py:14
+msgid "password2"
+msgstr "كلمة السر 2"
+
+#: .\accounts\forms.py:20
+msgid "first_name"
+msgstr "الإسم الأول"
+
+#: .\accounts\forms.py:20
+msgid "last_name"
+msgstr "الإسم الأخير"
+
+#: .\accounts\forms.py:26
+msgid "image"
+msgstr "صوره"
+
+#: .\accounts\templates\accounts\change_email.html:13
+msgid "Update Your Email"
+msgstr "تحديث البريد الالكتروني"
+
+#: .\accounts\templates\accounts\change_email.html:35
+msgid "Update Email"
+msgstr "تحديث البريد الالكتروني"
+
+#: .\accounts\templates\accounts\change_email.html:42
+#: .\accounts\templates\accounts\profile_edit.html:51
+#: .\accounts\templates\registration\password_change_form.html:10
+#: .\blog\templates\blog\post_detail.html:43
+#: .\blog\templates\blog\update_post.html:35
+#: .\blog\templates\blog\update_post.html:41
+msgid "Update"
+msgstr "تحديث"
+
+#: .\accounts\templates\accounts\change_email.html:43
+#: .\accounts\templates\accounts\delete_user.html:33
+#: .\accounts\templates\accounts\profile_edit.html:52
+#: .\blog\templates\blog\delete_comment.html:33
+#: .\blog\templates\blog\delete_post.html:33
+#: .\blog\templates\blog\post_form.html:42
+#: .\blog\templates\blog\update_post.html:42
+msgid "Cancel"
+msgstr "إلغاء"
+
+#: .\accounts\templates\accounts\delete_user.html:28
+#: .\blog\templates\blog\delete_comment.html:28
+#: .\blog\templates\blog\delete_post.html:28
+msgid "Delete Confirmation"
+msgstr "تاكيد عملية المسح"
+
+#: .\accounts\templates\accounts\delete_user.html:29
+msgid "Are you sure you want to delete your account"
+msgstr "هل انت متاكد انك تريد مسح حسابك"
+
+#: .\accounts\templates\accounts\delete_user.html:32
+#: .\blog\templates\blog\delete_comment.html:32
+#: .\blog\templates\blog\delete_post.html:32
+msgid "Yes, Delete"
+msgstr "نعم, امسح"
+
+#: .\accounts\templates\accounts\profile_edit.html:13
+msgid "Update Your Profile"
+msgstr "تحديث الملف الشخصي"
+
+#: .\accounts\templates\accounts\profile_edit.html:37
+msgid "Change Password"
+msgstr "تغير كلمة السر"
+
+#: .\accounts\templates\accounts\profile_edit.html:38
+msgid "Change Email"
+msgstr "تغير البريد الالكتروني"
+
+#: .\accounts\templates\accounts\profile_edit.html:39
+msgid "Delete Account"
+msgstr "مسح الحساب الخاص بك"
+
+#: .\accounts\templates\accounts\profile_edit.html:46
+msgid "Profile Info"
+msgstr "بيانات الملف الشخصي"
+
+#: .\accounts\templates\registration\logged_out.html:5
+msgid "You have been logged out!"
+msgstr "لقد تم تسجيل خروجك"
+
+#: .\accounts\templates\registration\logged_out.html:8
+#: .\accounts\templates\registration\password_reset_complete.html:8
+msgid "Log In Again?"
+msgstr "تسجيل الدخول مره أخري"
+
+#: .\accounts\templates\registration\login.html:8
+msgid "Your username and password didn't match. Please try again."
+msgstr "اسم المستخدم وكلمة السر غير متطابقين"
+
+#: .\accounts\templates\registration\login.html:16
+msgid "Please login to see this page."
+msgstr "من فضلك قم بتسجيل الدخول لرؤية محتوي هذه الصفحه"
+
+#: .\accounts\templates\registration\login.html:20
+#: .\accounts\templates\registration\login.html:25
+#: .\blog\templates\blog\post_detail.html:96
+msgid "Login"
+msgstr "تسجل الدخول"
+
+#: .\accounts\templates\registration\login.html:30
+msgid "Forgot Password?"
+msgstr "هل نسيت كلمة السر؟"
+
+#: .\accounts\templates\registration\login.html:33
+msgid "Need An Account?"
+msgstr "تحتاج الي حساب جديد؟"
+
+#: .\accounts\templates\registration\login.html:33
+msgid "Sign Up Now"
+msgstr "إنشاء حساب الأن"
+
+#: .\accounts\templates\registration\password_reset_complete.html:5
+msgid "The password has been changed!"
+msgstr "تم تغير كلمة السر بنجاح"
+
+#: .\accounts\templates\registration\password_reset_confirm.html:7
+msgid "Please enter (and confirm) your new password."
+msgstr "من فضلك ادخل (وأكد) كلمة السر الجديده"
+
+#: .\accounts\templates\registration\password_reset_confirm.html:12
+#: .\accounts\templates\registration\password_reset_confirm.html:27
+msgid "Change password"
+msgstr "تغير كلمة السر"
+
+#: .\accounts\templates\registration\password_reset_confirm.html:17
+msgid "New password:"
+msgstr "كلمة السر الجديده"
+
+#: .\accounts\templates\registration\password_reset_confirm.html:22
+msgid "Confirm password:"
+msgstr "تاكيد كلمة السر"
+
+#: .\accounts\templates\registration\password_reset_confirm.html:32
+msgid "Password reset failed"
+msgstr "لقد فشلت محاولة إعادة إدخال كلمة السر"
+
+#: .\accounts\templates\registration\password_reset_confirm.html:33
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used. Please request a new password reset."
+msgstr ""
+"رابط إعادة تغير كلمة السر غير صالح, ربما لانه تم إستخدامه من قبل لذالك قم "
+"بطلب رابط اخر لإعادة ادخال كلمة السر"
+
+#: .\accounts\templates\registration\password_reset_done.html:4
+msgid ""
+"We've emailed you instructions for setting your password. If they haven't "
+"arrived in a few minutes, check your spam folder."
+msgstr ""
+"لقد ارسلنا لك إيميل يحتوي علي تعليمات لتغير كلمة السر الخاصة بك. لو لم يصلك "
+"الإيميل خلال دقائق قليله, تحقق من صندوق الرسائل المزعجه الخاص بك"
+
+#: .\accounts\templates\registration\password_reset_form.html:5
+#: .\accounts\templates\registration\password_reset_form.html:16
+msgid "Reset Password"
+msgstr "إعادة تعين كلمة السر"
+
+#: .\accounts\templates\registration\register.html:5
+msgid "Join Us Today"
+msgstr "إنضم إلينا اليوم"
+
+#: .\accounts\templates\registration\register.html:10
+msgid "Sign Up"
+msgstr "تسجيل في الموقع"
+
+#: .\accounts\views.py:39
+msgid ""
+"Your account has been successfully activated! You are now able to login "
+msgstr "لقد تم تفعيل حسابك بنجاح! يمكنك الان تسجيل الدخول "
+
+#: .\accounts\views.py:43
+msgid "The activation link is invalid!"
+msgstr " رابط التفعيل غير صالح!"
+
+#: .\accounts\views.py:50
+msgid "You have to logout first!"
+msgstr "يجب ان تقوم بتسجيل الدخول اولا!"
+
+#: .\accounts\views.py:62
+msgid "Sorry this email already signed up!"
+msgstr "نأسف هذا البريد الالكتروني تم التسجيل به من قبل!"
+
+#: .\accounts\views.py:93 .\accounts\views.py:171
+msgid ""
+"we have sent you an email to verify your account, please check your mail ! "
+msgstr "لقد ارسلنا لك بريد اليكتروني لتفعيل حسابك, من فضلك قم بفحص بريدك"
+
+#: .\accounts\views.py:97
+msgid "Please write a valid value!"
+msgstr "من فضلك قم بكتابة قيم صحيحه"
+
+#: .\accounts\views.py:101
+msgid "Register"
+msgstr "التسجيل في الموقع"
+
+#: .\accounts\views.py:112
+msgid "Your account has been updated !"
+msgstr "حسابك تم تحديثه!"
+
+#: .\accounts\views.py:121 .\templates\base.html:82
+msgid "Profile"
+msgstr "الملف الشخصي"
+
+#: .\accounts\views.py:132
+msgid "Your account has been deleted successfully !"
+msgstr "لقد تم حذف حسابك بنجاح!"
+
+#: .\accounts\views.py:134
+msgid "Delete-Account"
+msgstr "مسح - الحساب"
+
+#: .\accounts\views.py:137
+msgid "Oooops you do not have permission to do that!"
+msgstr "نعتذر انت لا تملك الصلاحيه لفعل ذلك!"
+
+#: .\accounts\views.py:173
+msgid "Please write a valid email."
+msgstr "من قم بكتابة بريد إلكتروني صحيح"
+
+#: .\accounts\views.py:178
+msgid "update-Email"
+msgstr "تحديث - البريد الالكتروني"
+
+#: .\blog\templates\blog\about.html:16 .\blog\views.py:153
+msgid "About"
+msgstr "عن"
+
+#: .\blog\templates\blog\about.html:16
+msgid " me"
+msgstr "ي"
+
+#: .\blog\templates\blog\about.html:19
+msgid "Hello There, My name is "
+msgstr "مرحبا, انا إسمي "
+
+#: .\blog\templates\blog\about.html:19
+msgid "Bahy Alaa Allam"
+msgstr "باهي علاء علام"
+
+#: .\blog\templates\blog\about.html:19
+msgid " , I'm from Egypt and I'm a "
+msgstr " , انا من مصر و انا"
+
+#: .\blog\templates\blog\about.html:19
+msgid "Backend Developer"
+msgstr "مطور للواجهات الخلفية للمواقع الالكترونيه"
+
+#: .\blog\templates\blog\about.html:21
+msgid " My <span style=\"color:#0089ff;\"> Skills </span>"
+msgstr "مهاراتي"
+
+#: .\blog\templates\blog\about.html:34
+msgid " My <span style=\"color:#0089ff;\">Contact</span> Info "
+msgstr "للتواصل"
+
+#: .\blog\templates\blog\about.html:43
+msgid "About This <span style=\"color:#0089ff;\">Website</span>"
+msgstr "عن هذا الموقع"
+
+#: .\blog\templates\blog\about.html:44
+msgid "There is no real info in it just some words to fill in the space "
+msgstr "لا يوجد معلومات حقيقية في هذاالموقع"
+
+#: .\blog\templates\blog\about.html:45
+msgid "I used "
+msgstr "انا استخدمت "
+
+#: .\blog\templates\blog\about.html:45
+msgid "Django framework 3.0"
+msgstr "نظام Django إصدار رقم 3.0"
+
+#: .\blog\templates\blog\about.html:46
+msgid "SQLite3"
+msgstr "قاعدة البيانات SQLite3"
+
+#: .\blog\templates\blog\about.html:46
+msgid " and this "
+msgstr "وهذا القالب  "
+
+#: .\blog\templates\blog\about.html:47
+msgid "Colorlib Template"
+msgstr "قالب من موقع Colorlib"
+
+#: .\blog\templates\blog\about.html:48
+msgid "to make that Website"
+msgstr " لعمل هذا الموقع"
+
+#: .\blog\templates\blog\delete_comment.html:29
+msgid "Are you sure you want to delete your comment ?"
+msgstr "هل انت متاكد انك تريد مسح تعليقك ؟"
+
+#: .\blog\templates\blog\delete_post.html:29
+msgid "Are you sure you want to delete your post"
+msgstr "هل انت متاكد انك تريد مسح منشورك "
+
+#: .\blog\templates\blog\home.html:11 .\templates\base.html:65
+msgid "blog"
+msgstr "المدونه"
+
+#: .\blog\templates\blog\home.html:27
+msgid "Blog Filter"
+msgstr "بحث في المدونه"
+
+#: .\blog\templates\blog\home.html:31
+msgid "Search"
+msgstr "بحث"
+
+#: .\blog\templates\blog\home.html:48 .\blog\templates\blog\post_detail.html:48
+msgid "Last updated"
+msgstr "أخر تحديث"
+
+#: .\blog\templates\blog\home.html:60
+msgid "Comments"
+msgstr "نعليقات"
+
+#: .\blog\templates\blog\home.html:68 .\blog\templates\blog\post_detail.html:53
+msgid "Draft"
+msgstr "لم يتم نشره بعد"
+
+#: .\blog\templates\blog\home.html:82
+msgid "First"
+msgstr "الاولي"
+
+#: .\blog\templates\blog\home.html:111
+msgid "Last"
+msgstr "الاخيره"
+
+#: .\blog\templates\blog\post_detail.html:44
+msgid "Delete"
+msgstr "امسح"
+
+#: .\blog\templates\blog\post_detail.html:97
+msgid "To Like This Post."
+msgstr "للتفاعل مع هذ المنشور"
+
+#: .\blog\templates\blog\post_form.html:35
+msgid "Create Post"
+msgstr "إنشاء منشور "
+
+#: .\blog\templates\blog\post_form.html:41
+msgid "Add Post"
+msgstr "إضافة منشور"
+
+#: .\blog\views.py:33
+msgid "Blog"
+msgstr "المدونه"
+
+#: .\blog\views.py:76
+msgid "Your comment has been add!"
+msgstr "لقد تم إضافة تعليقك !"
+
+#: .\blog\views.py:82
+msgid "Blog-{}"
+msgstr "المدونه-{}"
+
+#: .\blog\views.py:94
+msgid "Your post has been add successfully !"
+msgstr "لقد تم إضافة منشورك بنجاح !"
+
+#: .\blog\views.py:99
+msgid "Blog-Add Post"
+msgstr "المدونه-إضافة منشور"
+
+#: .\blog\views.py:112
+msgid "Your post has been updated successfully !"
+msgstr "لقد تم إضافة منشورك بنجاح !"
+
+#: .\blog\views.py:120
+msgid "Blog-Update {}"
+msgstr "المدونه-تحديث {}"
+
+#: .\blog\views.py:133
+msgid "The post has been deleted successfully !"
+msgstr "لقد تم حذف منشورك بنجاح !"
+
+#: .\blog\views.py:135
+msgid "Blog-Delete Post {}"
+msgstr "المدونه-حذف المنشور {}"
+
+#: .\blog\views.py:147
+msgid "Blog-Delete Comment {}"
+msgstr "المدونه-حذف التعليق {}"
+
+#: .\contact\templates\contact\contact.html:11 .\contact\views.py:23
+#: .\templates\base.html:72
+msgid "Contact-us"
+msgstr "تواصل معنا"
+
+#: .\contact\templates\contact\contact.html:30
+msgid "Get in Touch"
+msgstr "تواصل معنا"
+
+#: .\contact\templates\contact\contact.html:53
+msgid "Send Message"
+msgstr "إرسال رساله"
+
+#: .\contact\templates\contact\contact.html:64
+msgid "Egypt-Gharbia, Tanta."
+msgstr "مصر-الغربية, طنطا"
+
+#: .\contact\templates\contact\contact.html:77
+msgid "Send us your query anytime!"
+msgstr "لو عندك اي استفسار تواصل معنا في اي وقت"
+
+#: .\contact\views.py:21
+msgid "Your mail has been sent successfully !"
+msgstr "لقد تم ارسال رسالتك بنجاح ! !"
+
+#: .\templates\base.html:64
+msgid "home"
+msgstr "الرئيسيه"
+
+#: .\templates\base.html:67
+msgid "Blog Home"
+msgstr "الرئيسية"
+
+#: .\templates\base.html:68
+msgid "Create New Post"
+msgstr "إنشاء منشور جديد"
+
+#: .\templates\base.html:71
+msgid "about"
+msgstr "عن الموقع"
+
+#: .\templates\base.html:73
+msgid "عربي"
+msgstr "English"
+
+#: .\templates\base.html:83
+msgid "Post a Job"
+msgstr "إضافة وظيفه"
+
+#: .\templates\base.html:84
+msgid "Logout"
+msgstr "تسجيل الخروج"
+
+#: .\templates\base.html:88
+msgid "Join Us"
+msgstr "التسجيل في الموقع"
+
+#: .\templates\base.html:89
+msgid "Log in"
+msgstr "تسجيل الدخول"
+
+#: .\templates\base.html:122
+msgid "Tanta, Gharbia, Egypt"
+msgstr "طنطا,الغربية,مصر"
+
+#, fuzzy
+#~| msgid ""
+#~| "we have sent you an email to verify your account, please check your "
+#~| "mail ! "
+#~ msgid ""
+#~ "We have sent to you an email to verify your account, please check your "
+#~ "mail !"
+#~ msgstr "لقد ارسلنا لك بريد اليكتروني لتفعيل حسابك, من فضلك قم بفحص بريدك"
+
+#~ msgid "like"
+#~ msgstr "اعجاب"
+
+#~ msgid "likes"
+#~ msgstr "إعجابات"
+
+#~ msgid "Like"
+#~ msgstr "أعجبني"
+
+#~ msgid "Unlike"
+#~ msgstr "إلغاء الاعجاب"
+
+#~ msgid "Likes"
+#~ msgstr "إعجابات"
+
+#~ msgid "My "
+#~ msgstr "ي"
+
+#~ msgid "Skills"
+#~ msgstr "مهارات"
+
+#~ msgid "contact"
+#~ msgstr "تواصل معنا"
+
+#~ msgid "Job Board"
+#~ msgstr "موقع وظائف"
