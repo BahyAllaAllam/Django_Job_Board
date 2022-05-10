@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load i18n %}
+
+{% block body %}
+
+    <!-- bradcam_area -->
+    <div class="bradcam_area bradcam_bg_1">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text">
+                        <h3>{% trans "Update Your Email" %}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- bradcam_area -->
+    <div class="job_details_area">
+        <div class="container">
+            {% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} text-center">
+                {{ message }}
+            </div>
+            {% endfor %}
+            {% endif %}
+            <div class="content">
+                <div class="col-md-8">
+                    <div class="content-section">
+                        <form method="POST">
+                            {% csrf_token %}
+                            <fieldset class="form-group">
+                                <legend class="border-bottom mb-4 text-center">{% trans "Update Email" %}</legend>
+                                {% if form.email.errors %}
+                                {{ form.email.errors }}
+                                {% endif %}
+                                {% bootstrap_form e_form %}
+                            </fieldset>
+                            {% buttons %}
+                            <button class="boxed-btn3 w-100 mt-4" type="submit">{% trans "Update" %}</button>
+                            <a class="btn btn-outline-danger w-100 mt-4" href="/">{% trans "Cancel" %}</a>
+                            {% endbuttons %}
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{%  endblock body%}
