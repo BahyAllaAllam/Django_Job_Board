@@ -1,0 +1,187 @@
+{% extends "base.html " %}
+{% load bootstrap4 %}
+{% load i18n %}
+{% block body %}
+
+
+<!-- bradcam_area  -->
+<div class="bradcam_area bradcam_bg_1">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="bradcam_text">
+                    <h3>{{ post.title }}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/ bradcam_area  -->
+
+
+<!--================Blog Area =================-->
+<section class="blog_area single-post-area section-padding">
+      <div class="container">
+          {% if messages %}
+          {% for message in messages %}
+          <div class="alert alert-{{ message.tags }} text-center">
+              {{ message }}
+          </div>
+          {% endfor %}
+          {% endif %}
+         <div class="row">
+            <div class="col-lg-8 mx-auto posts-list">
+               <div class="">
+                   <article class="content-section">
+                       <div class="media">
+                           <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}" alt="{{ post.author }} Profile Picture">
+                           <div class="media-body">
+                               <div class="article-metadata">
+                                   <h2>{{ post.author }}</h2>
+                                   {% if post.author == user %}
+                                   <div>
+                                       <a class="btn btn-outline-secondary btn-sm mt-1 mb-1" href="{% url 'blog:update-post' post.slug %}">{% trans "Update" %}</a>
+                                       <a class="btn btn-outline-danger btn-sm mt-1 mb-1" href="{% url 'blog:delete-post' post.slug %}">{% trans "Delete" %}</a>
+                                   </div>
+                                   {% endif %}
+                               </div>
+                               <small class="text-muted">{% trans "Last updated" %} {{ post.publish_date|date:"F d, Y" }}</small>
+                               <img class="post-img" src="{{ post.img.url }}" alt="{{ post.title }} Image">
+                               <h2>{{ post.title }}</h2>
+                               {% if post.active %}
+                               {% else %}
+                               <h3 class="ml-10" style="color:red"> {% trans "Draft" %} </h3>
+                               {% endif %}
+                               <p class="article-content">{{ post.content|safe }}</p>
+                               <ul class="blog-info-link mt-3 mb-4">
+                                   {% if post.category %}
+                                   <li><i class="fa fa-user"></i> {{ post.category }}</li>
+                                   {% endif %}
+                                   <li>
+                                       <i class="fa fa-share-alt"></i>
+                                       <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}" target="_blank">
+                                           <i class="fa fa-facebook-f"></i>
+                                       </a>
+                                       <a href="https://twitter.com/intent/tweet?text={{ request.build_absolute_uri }}" target="_blank">
+                                           <i class="fa fa-twitter"></i>
+                                       </a>
+                                       <a href="https://api.whatsapp.com/send?text={{ request.build_absolute_uri }}" target="_blank">
+                                           <i class="fa fa-whatsapp"></i>
+                                       </a>
+                                   </li>
+                                   {% if user.is_authenticated %}
+                                   <li>
+                                       <form action="{% url 'blog:like_post' post.slug %}" method="post">
+                                           {% csrf_token %}
+                                           <input type="hidden" name="post_slug" value="{{ post.slug }}">
+                                           {% if user not in post.likes.all %}
+                                           <button class="btn btn-outline-primary btn-sm" type="submit"><i class="fa fa-heart-o"></i> Like</button>
+                                           {% else %}
+                                           <button class="btn btn-primary btn-sm" type="submit"><i class="fa fa-heart"></i> Unlike </button>
+                                           {% endif %}
+                                           {% if post.likes.count == 1 %}
+                                           {{ post.likes.count }} Like
+                                           {% else %}
+                                           {{ post.likes.count }} Likes
+                                           {% endif %}
+                                       </form>
+                                   </li>
+                                   {% else %}
+                                   <li><i class="fa fa-heart"></i>
+                                       {% if post.likes.count == 1 %}
+                                       {{ post.likes.count }} Like
+                                       {% else %}
+                                       {{ post.likes.count }} Likes
+                                       {% endif %}
+                                       <a href="{% url 'login' %}">{% trans "Login" %}</a>
+                                       {% trans "To Like This Post." %}
+                                   </li>
+                                   {% endif %}
+                               </ul>
+                           </div>
+                       </div>
+                       <!--
+                       {% if comments %}
+                       <div class="comments-area">
+                           {% if comments|length == 1 %}
+                           <h4>{{ comments|length }} comment...</h4>
+                           {% else %}
+                           <h4>{{ comments|length }} Comments...</h4>
+                           {% endif %}
+                           {% for comment in comments %}
+                           <div class="comment-list">
+                               <div class="single-comment justify-content-between d-flex">
+                                   <div class="user justify-content-between d-flex">
+                                       <div class="thumb">
+                                           <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}" alt="{{ post.author }} Profile Picture">
+                                       </div>
+                                       <div class="desc">
+                                           <p class="comment">{{ comment.comment }}</p>
+                                           <div class="d-flex justify-content-between">
+                                               <div class="d-flex align-items-center">
+                                                   <h5>{{ comment.author }}</h5>
+                                                   <p class="date">{{ comment.date_posted }}</p>
+                                               </div>
+                                               <div class="reply-btn">
+                                                   <a href="{% url 'blog:delete-comment' comment.slug %}" class="btn-reply text-uppercase">Delete</a>
+                                               </div>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                           {% endfor %}
+                       </div>
+                       {% else %}
+                       <div class="comments-area">
+                           <h4>0 Comments...</h4>
+                           <P>There is no comments yet...</P>
+                       </div>
+                       {% endif %}
+                       {% if user.is_authenticated %}
+                       {% for comment in comments %}
+                       {% if comment.author != user %}
+
+                       {% if forloop.counter > 1 %}
+                       <h4>{{ comment.author }}</h4>
+                       {% else %}
+                       <div class="comment-form">
+                           <h4>Leave a Reply</h4>
+                           <form class="comment" method="post">
+                               {% csrf_token %}
+                               {{ form.media }}
+                               {% bootstrap_form form %}
+                               {% buttons %}
+                               <button class="button button-contactForm btn_1 boxed-btn" type="submit">Add Comment</button>
+                               {% endbuttons %}
+                           </form>
+                       </div>
+                       {% endif %}
+                       {% else %}
+                       {% if forloop.counter > 1 %}
+                       {% else %}
+                       <h4>{{ comment.author }}</h4>
+                       <div class="comments-area">
+                           <h4>Your comment has been add.</h4>
+                       </div>
+                       {% endif %}
+                       {% endif %}
+                       {% endfor %}
+                       {% else %}
+                       <div class="comments-area">
+                           <h4><a href="{% url 'login' %}">Login</a> to comment on this post.</h4>
+                       </div>
+                       {% endif %} -->
+                       <div class="comments-area">
+                           <div class="fb-comments" data-href="{{ request.build_absolute_uri }}" data-numposts="5" data-width=""></div>
+                       </div>
+                   </article>
+               </div>
+            </div>
+         </div>
+      </div>
+</section>
+<!--================ Blog Area end =================-->
+
+
+{% endblock body %}

@@ -1,0 +1,56 @@
+{%extends "base.html"%}
+{% load static %}
+{% load i18n %}
+{% block body %}
+
+<!-- bradcam_area  -->
+<div class="bradcam_area bradcam_bg_1">
+</div>
+<!--/ bradcam_area  -->
+<section class="blog_area single-post-area section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="content-section">
+                    <div class="border-bottom pt-3 sub-title">
+                        <h1> <span style="color:#0089ff;">{% trans "About" %}</span>{% trans " me" %}</h1>
+                    </div>
+                    <br>
+                    <p>{% trans "Hello There, My name is " %}<span style="color:#0089ff;">{% trans "Bahy Alaa Allam" %}</span>{% trans " , I'm from Egypt and I'm a " %} <span style="color:#0089ff;">{% trans "Backend Developer" %}</span>.</p>
+                    <div class="border-top p-2 m-2">
+                        <h4>{% blocktrans %} My <span style="color:#0089ff;"> Skills </span>{% endblocktrans %}</h4>
+                        <ul>
+                            <li>Paython</li>
+                            <li>Django</li>
+                            <li>Java Script</li>
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>Bootstrap4</li>
+                            <li>PostgreSQL</li>
+                        </ul>
+                    </div>
+                    <br>
+                    <div class="border-top p-2 m-2">
+                        <h4>{% blocktrans %} My <span style="color:#0089ff;">Contact</span> Info {% endblocktrans %}</h4>
+                        <ul>
+                            <li><a href="https://www.facebook.com/Bahy410" target="_blank"><i class="fa fa-facebook"></i> </a></li>
+                            <li><a href="https://twitter.com/Ba_Hy410" target="_blank"><i class="fa fa-twitter"></i> </a></li>
+                            <li><i class="fa fa-whatsapp"></i><span style="color:#0089ff;">+20 01117021617 </span> </li>
+                        </ul>
+                    </div>
+                    <br>
+                    <div class="border-top p-2 m-2">
+                        <h4>{% blocktrans %}About This <span style="color:#0089ff;">Website</span>{% endblocktrans %}</h4>
+                        {% trans "There is no real info in it just some words to fill in the space " %}<br> <br>
+                        {% trans "I used " %}<a href="https://www.djangoproject.com/" ><strong> {% trans "Django framework 3.0," %} </strong> </a>
+                        <a href="https://www.sqlite.org/about.html" ><strong> {% trans "SQLite3" %} </strong> </a>{% trans " and this " %}
+                        <a href="https://colorlib.com/wp/template/job-board-2/"> <strong>{% trans "Colorlib Template" %}</strong> </a>
+                        {% trans "to make that Website" %}
+                    </div>
+                    <br>
+                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock body %}
