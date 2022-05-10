@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block body %}
+
+    <!-- bradcam_area  -->
+    <div class="bradcam_area bradcam_bg_1">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text">
+                        <h3>{% trans "Job Application" %}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ bradcam_area  -->
+    <div class="job_details_area">
+
+        <div class="container">
+            {% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} text-center">
+                {{ message }}
+            </div>
+            {% endfor %}
+            {% endif %}
+           <div class="content">
+                <div class="col-lg-12">
+                    <div class="content-section">
+                        <div class="job_content">
+                            <h4 class="border-bottom mb-4 text-center">{% trans "Job Application" %}</h4>
+                            <ul>
+                                <li>{% trans "The Job" %}: <span> {{ job.job }}</span></li>
+                                <li>{% trans "Name" %}: <span> {{ job.name }}</span></li>
+                                <li>{% trans "Email" %}: <span> {{ job.email }}</span></li>
+                                <li>{% trans "Portfolio link" %}: <p><a href="{{ job.portfolio_link }}">{{ job.portfolio_link }}</a></p></li>
+                                <li>{% trans "CV" %}: <a href="/media/{{ job.cv }}"> {{ job.cv }}</a></li>
+                                <li>{% trans "Cover Letter" %}: <article><span class="ml-3">{{ job.cover_letter }}</span></article></li>
+                                <li>{% trans "Application Date" %}: <span> {{ job.created_at }}</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{%  endblock body%}

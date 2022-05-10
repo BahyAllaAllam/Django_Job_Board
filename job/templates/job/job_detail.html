@@ -1,0 +1,178 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block body %}
+
+    <!-- bradcam_area  -->
+    <div class="bradcam_area bradcam_bg_1">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text">
+                        <h3>{{job|safe}}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ bradcam_area  -->
+    <div class="job_details_area">
+
+        <div class="container">
+            {% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} text-center">
+                {{ message }}
+            </div>
+            {% endfor %}
+            {% endif %}
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="job_details_header">
+                        <div class="single_jobs white-bg justify-content-between">
+                            <div class="jobs_left d-flex align-items-center">
+                                <div class="jobs_conetent">
+                                    <h4>{{job|safe}}</h4>
+                                    <p> {% trans "posted" %} {{ job.publish|timesince }} {% trans "ago" %} </p>
+                                    {% if job.active %}
+                                    {% else %}
+                                    <div class="location">
+                                        <p style="color:red;">{% trans "Draft" %}</p>
+                                    </div>
+                                    {% endif %}
+                                    <div class="links_locat d-flex align-items-left">
+                                        <div class="location">
+                                            <p>{% trans "published by " %} {{job.owner|safe}}</p>
+                                        </div>
+                                        <div class="location">
+                                            <p> <i class="fa fa-map-marker"></i> {{job.location|safe}}</p>
+                                        </div>
+                                        <div class="location">
+                                            <p> <i class="fa fa-clock-o"></i> {{job.job_type|safe}}</p>
+                                        </div>
+                                        <div class="location">
+                                            <p>
+                                                <i class="fa fa-share-alt"></i>
+                                                <a href="https://www.facebook.com/sharer/sharer.php?u=Be%20The%20First%20To%20Apply%20On%20{{ request.build_absolute_uri }}" target="_blank">
+                                                    <i class="fa fa-facebook-f"></i>
+                                                </a>
+                                                <a href="https://twitter.com/intent/tweet?text=Be%20The%20First%20To%20Apply%20On%20{{ request.build_absolute_uri }}" target="_blank">
+                                                    <i class="fa fa-twitter"></i>
+                                                </a>
+                                                <a href="https://api.whatsapp.com/send?text=Be%20The%20To%20Apply%20On%20{{ request.build_absolute_uri }}" target="_blank">
+                                                    <i class="fa fa-whatsapp"></i>
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a class="btn btn-outline-primary btn-sm mr-1" href="{% url 'jobs:JobDetailApi' job.id %}">{% trans "Api" %}</a>
+
+                            {% if job.owner == user or user.is_superuser %}
+                            <a class="btn btn-outline-primary btn-sm mt-1 mb-45" href="{% url 'jobs:update-job' job.slug %}">{% trans "Update" %}</a>
+                            <a class="btn btn-outline-danger btn-sm mt-1 mb-45" href="{% url 'jobs:delete-job' job.slug %}">{% trans "Delete" %}</a>
+                            {% endif %}
+
+
+                        </div>
+                    </div>
+                    <div class="job_sumary">
+                        <div class="summery_header">
+                            <h3>{% trans "Job Summery" %}</h3>
+                        </div>
+                        <div class="job_content">
+                            <ul class="blog-info-link list-unstyled ml-3">
+                                {% if job.owner == user or user.is_superuser %}
+                                <li>{% trans "Published at" %}: <span>{{job.publish|date:"d M Y"}}</span></li>
+                                {% endif %}
+
+                                <li>{% trans "Vacancy" %}: <span>{{ job.vacancy|safe }} {% if job.vacancy == 1 %}{% trans "Position" %}{% else %}{% trans "Positions" %}{% endif %}<!--pluralize--></span></li>
+                                <li>{% trans "Salary" %}: <span>{{job.salary|safe}} {% trans "$" %}</span></li>
+                            </ul>
+                        </div>
+                        {% if job.category %}
+                        <div class="summery_header mt-5">
+                            <h3>{% trans "Job Categories" %}</h3>
+                        </div>
+                        <div class="job_content">
+                            <ul class="blog-info-link list_unstyled ml-3">
+                                <li>{{ job.category|safe }}</li>
+                            </ul>
+                        </div>
+                        {% else %}
+                        {% endif %}
+                        {% if job.owner == user or user.is_superuser %}
+                        <div class="summery_header mt-5">
+                            <h3>{% trans "Job Applicants" %}</h3>
+                        </div>
+                        <div class="job_content">
+                            <ul class="blog-info-link list_unstyled ml-3">
+                                {% for job_applicants in job.apply_job.all %}
+                                <li><a href="{{ job_applicants.get_absolute_url }}">{{ job_applicants }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        {% endif %}
+                    </div>
+                    <div class="descript_wrap white-bg">
+                        <div class="single_wrap">
+                            <h4>{% trans "Job Description" %}</h4>
+                            <p class="ml-3">{{ job.description|safe }}</p>
+                        </div>
+                        <div class="single_wrap">
+                            <h4>{% trans "Job Requirements" %}</h4>
+                            <p class="ml-3">{{job.requirements|linenumbers|linebreaksbr|safe}}</p>
+                        </div>
+                    </div>
+                    <div class="apply_job_form white-bg">
+                        <h4>{% trans "Apply for the job" %}</h4>
+                        <form method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="input_field">
+                                        {{form1.name}}
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input_field">
+                                        {{form1.email}}
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="input_field">
+                                        {{form1.portfolio_link}}
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <i class="fa fa-cloud-upload" aria-hidden="true" style="margin:auto auto 50px 5px"></i>
+                                        </div>
+                                        <div class="custom-file">
+                                            {{form1.cv}}
+                                            <label class="my-label" >Upload Your CV</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="input_field">
+                                        {{form1.cover_letter}}
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="submit_btn">
+                                        <button class="boxed-btn3 w-100" type="submit">{% trans "Apply Now" %}</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!--<div class="col-lg-4"></div>-->
+            </div>
+        </div>
+    </div>
+{%  endblock body%}
